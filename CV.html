@@ -19,8 +19,15 @@
         .card img {
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
-            width: 100px;
+            object-fit: cover;
+            margin: auto;
+            display: block;
+        }
+        .profile {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
             height: 100px;
+            width: 100px;
             object-fit: cover;
             margin: auto;
             display: block;
@@ -54,10 +61,16 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="profile.png" class="card-img-top" alt="Hugo BERRIER">
+                    <img src="profile.png" class="card-img-top profile" alt="Hugo BERRIER"  height="100" widht="100">
                     <div class="card-body text-center">
                         <h5 class="card-title">Hugo BERRIER</h5>
-                        <p class="card-text">Développeur Web passionné, diplômé en BTS SIO SLAM.</p>
+                        <p class="card-text">Développeur Web</p>
+                        <img src="src/map-pin.svg" alt="map"  height="24" widht="24">
+                        Lecelles, France
+                        <br>
+                        <img src="src/telephone.svg" alt="phone"  height="24" widht="24">
+                        07 70 32 12 06
+                        <br>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#motivationModal">Voir lettre de motivation</button>
                     </div>
                 </div>
@@ -91,16 +104,33 @@
                         </ul>
                     </div>
                     <div class="tab-pane fade" id="competences" role="tabpanel">
-                        <span class="badge bg-primary" data-bs-toggle="tooltip" title="Expérience avancée">HTML</span>
-                        <span class="badge bg-primary" data-bs-toggle="tooltip" title="Expérience avancée">CSS</span>
-                        <span class="badge bg-secondary" data-bs-toggle="tooltip" title="Expérience intermédiaire">JavaScript</span>
-                        <span class="badge bg-secondary" data-bs-toggle="tooltip" title="Expérience intermédiaire">PHP</span>
-                        <span class="badge bg-secondary" data-bs-toggle="tooltip" title="Expérience intermédiaire">SQL</span>
-                        <span class="badge bg-secondary" data-bs-toggle="tooltip" title="Expérience intermédiaire">Python</span>
-                        <span class="badge bg-secondary" data-bs-toggle="tooltip" title="Expérience intermédiaire">WordPress</span>
-                        <span class="badge bg-success" data-bs-toggle="tooltip" title="Débutant">Java</span>
-                        <span class="badge bg-success" data-bs-toggle="tooltip" title="Débutant">React</span>
-                        <span class="badge bg-success" data-bs-toggle="tooltip" title="Débutant">C#</span>
+                        <div class="col-6">
+                            <ul>
+                                <li class="badge bg-primary" data-bs-toggle="tooltip" title="Expérience avancée">HTML</li>
+                                <li class="badge bg-primary" data-bs-toggle="tooltip" title="Expérience avancée">CSS</li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li class="badge bg-secondary" data-bs-toggle="tooltip" title="Expérience intermédiaire">JavaScript</li>
+                                <li class="badge bg-secondary" data-bs-toggle="tooltip" title="Expérience intermédiaire">PHP</li>
+                                <li class="badge bg-secondary" data-bs-toggle="tooltip" title="Expérience intermédiaire">SQL</li>
+                                <li class="badge bg-secondary" data-bs-toggle="tooltip" title="Expérience intermédiaire">Python</li>
+                                <li class="badge bg-secondary" data-bs-toggle="tooltip" title="Expérience intermédiaire">WordPress</li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li class="badge bg-success" data-bs-toggle="tooltip" title="Débutant">Java</li>
+                                <li class="badge bg-success" data-bs-toggle="tooltip" title="Débutant">React</li>
+                                <li class="badge bg-success" data-bs-toggle="tooltip" title="Débutant">Vue.js</li>
+                                <li class="badge bg-success" data-bs-toggle="tooltip" title="Débutant">CakePHP</li>
+                                <li class="badge bg-success" data-bs-toggle="tooltip" title="Débutant">MongoDB</li>
+                                <li class="badge bg-success" data-bs-toggle="tooltip" title="Débutant">Flutter</li>
+                                <li class="badge bg-success" data-bs-toggle="tooltip" title="Débutant">Bootstrap</li>
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

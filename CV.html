@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio - Hugo BERRIER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin: auto;
+            display: block;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            transition: 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .nav-tabs .nav-link.active {
+            background-color: #007bff;
+            color: white;
+        }
+        .list-group-item {
+            border-left: 4px solid #007bff;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Portfolio - Hugo BERRIER</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="profile.png" class="card-img-top" alt="Hugo BERRIER">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Hugo BERRIER</h5>
+                        <p class="card-text">Développeur Web passionné, diplômé en BTS SIO SLAM.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#motivationModal">Voir lettre de motivation</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <ul class="nav nav-tabs" id="cvTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="experiences-tab" data-bs-toggle="tab" data-bs-target="#experiences" role="tab">Expériences</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education" role="tab">Éducation</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="competences-tab" data-bs-toggle="tab" data-bs-target="#competences" role="tab">Compétences</button>
+                    </li>
+                </ul>
+                <div class="tab-content mt-3">
+                    <div class="tab-pane fade show active" id="experiences" role="tabpanel">
+                        <ul class="list-group">
+                            <li class="list-group-item">Service Civique au FLCR (2024)</li>
+                            <li class="list-group-item">CDI chez Burger King (Avril 2024-Octobre 2024)</li>
+                            <li class="list-group-item">Alternance chez Proges Plus (2021-2023)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="education" role="tabpanel">
+                        <ul class="list-group">
+                            <li class="list-group-item">Licence Pro Développeur Web - UPHF Valenciennes (Septembre 2024-Aujourd'hui)</li>
+                            <li class="list-group-item">Licence Développeur Web - Ynov Campus (Septembre 2023-Décembre 2023)</li>
+                            <li class="list-group-item">BTS SIO SLAM - Lycée Gaston Berger</li>
+                            <li class="list-group-item">Baccalauréat mention assez bien (2018-2021)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="competences" role="tabpanel">
+                        <span class="badge bg-primary" data-bs-toggle="tooltip" title="Expérience avancée">HTML</span>
+                        <span class="badge bg-primary" data-bs-toggle="tooltip" title="Expérience avancée">CSS</span>
+                        <span class="badge bg-secondary" data-bs-toggle="tooltip" title="Expérience intermédiaire">JavaScript</span>
+                        <span class="badge bg-secondary" data-bs-toggle="tooltip" title="Expérience intermédiaire">PHP</span>
+                        <span class="badge bg-secondary" data-bs-toggle="tooltip" title="Expérience intermédiaire">SQL</span>
+                        <span class="badge bg-secondary" data-bs-toggle="tooltip" title="Expérience intermédiaire">Python</span>
+                        <span class="badge bg-secondary" data-bs-toggle="tooltip" title="Expérience intermédiaire">WordPress</span>
+                        <span class="badge bg-success" data-bs-toggle="tooltip" title="Débutant">Java</span>
+                        <span class="badge bg-success" data-bs-toggle="tooltip" title="Débutant">React</span>
+                        <span class="badge bg-success" data-bs-toggle="tooltip" title="Débutant">C#</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="motivationModal" tabindex="-1" aria-labelledby="motivationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="motivationModalLabel">Lettre de motivation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="lettre_motivation.pdf" width="750px" height="500px"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+</body>
+</html>
